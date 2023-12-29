@@ -1,0 +1,25 @@
+<div class="container">
+  <!-- column one -->
+  <div>
+    <input  class="dividend"
+            [ngClass]="isValid(dividend) ? 'error' : 'no-error'"
+            type="text"
+            (input)="onDividendChange($event)"
+            placeholder="dividend">
+    <div class="line"></div>
+    <input class="divisor"
+          [ngClass]="isValid(divisor) ? 'error' : 'no-error'"
+          type="text"
+          (input)="onDivisorChange($event)"
+          placeholder="divisor">
+  </div>
+  <!-- column two -->
+  <div>
+    <div class="bottom-line"></div>
+    <div class="top-line"></div>
+  </div>
+  <!-- column three -->
+  <div>
+    <div class="item result">{{result}}</div>
+  </div>
+</div>
